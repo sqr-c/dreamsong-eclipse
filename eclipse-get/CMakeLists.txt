@@ -61,8 +61,8 @@ if(BUILD STREQUAL "i")
 	add_definitions(
 		#-DPATH_D_MAIN_PREFIX=\\"${PROJECT_INSTALL_DYNAMIC_DIR}\\"
 		-DEID_SEARCH_DIRS=\\"${INSTALL_USER_HOME}/Downloads/\\",\\"${INSTALL_USER_HOME}/.eclipse/\\",\\"/tmp\\"
+		-DPATH_D_MAIN_PREFIX=\\"\\"
 	)
-
 	add_executable(${PROJECT_NAME} ${PROJECT_SRC} ${SUBPROJECT_OBJ})
 	install(TARGETS ${PROJECT_NAME} DESTINATION ${PROJECT_INSTALL_BIN_DIR})
 else()
