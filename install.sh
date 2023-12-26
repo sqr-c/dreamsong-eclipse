@@ -1,15 +1,4 @@
-#!/bin/bash
-
-echo "Install target \"eclipse\"? (Y/N)"
-read buf
-
-if [[ "$buf" != "N" && "$buf" != "n" ]]; then
-	cd eclipse/ && sh install.sh && cd ..
-fi
-
-echo "Install target \"eclipse-get\"? (Y/N)"
-read buf
-
-if [[ "$buf" != "N" && "$buf" != "n" ]]; then
-	cd eclipse-get/ && sh install.sh && cd ..
-fi
+cmake -B build/ -D BUILD=i && \
+make -C build/ && \
+sudo make -C build/ install && \
+echo "Success!"
